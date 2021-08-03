@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>product table</title>
+</head>
+<body>
+<div>
+    <table style="width: 500px;border: solid black 1px">
+        <tr style="border: solid black 1px">
+            <td style="margin: 0px auto">产品信息</td>
+        </tr>
+        <tr style="border: solid black 1px">
+            <td>产品名称</td>
+            <td>产品价格</td>
+            <td>产品有效时间</td>
+        </tr>
+
+        <tr th:each="user :${product}" style="border: solid black 1px">
+            <td th:text="${user.description}"></td>
+            <td th:text="${user.price}"></td>
+            <td th:text="${user.availableFrom}"></td>
+        </tr>
+
+
+
+    </table>
+</div>
+</body>
+</html>
